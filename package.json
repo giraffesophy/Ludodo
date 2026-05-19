@@ -1,0 +1,35 @@
+{
+  "name": "wave-room-chat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "鹿多多 AI 課程互動聊天室",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon server/index.js",
+    "client:dev": "npm run dev --workspace client",
+    "build": "npm run build --workspace client",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
+    "vite": "^5.3.4"
+  },
+  "workspaces": [
+    "client"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
